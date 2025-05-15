@@ -1,0 +1,26 @@
+name: Deploy to Prod
+
+on:
+  workflow_run:
+    workflows: ["Publish Docker Image"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Restart docker-compose with new images
+        run: |
+          sshpass -p "${{ secrets.SERVER_PASSWORD }}" ssh -o StrictHostKeyChecking=no root@212.193.59.46 << 'EOF'
+            cd /home/story-base-server
+            docker-compose pull unison-api
+            docker-compose up -d --no-deps unison-api
+          EOF

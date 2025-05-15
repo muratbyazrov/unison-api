@@ -1,0 +1,33 @@
+version: '3.4'
+
+x-check: &default-healthcheck
+  healthcheck:
+    test: ["CMD", "/data/.prepare"]
+
+services:
+  postgres:
+    image: "${IMG_POSTGRES_TAG}"
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=unison-api-user-0
+      - POSTGRES_PASSWORD=unison-api-password-0
+    command: [ "postgres", "-c", "shared_buffers=256MB", "-c", "max_connections=200" ]
+    ports:
+      - "${IP}:${POSTGRES_EXPOSE}"
+    volumes:
+      - ./postgres/data:/data:rw
+    <<: *default-healthcheck
+
+  unison-api:
+    build:
+      context: "${UNISON_API_CONTEXT}"
+      dockerfile: "${UNISON_API_DOCKER_FILE}"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=docker
+    ports:
+      - "${IP}:${UNISON_API_EXPOSE}"
+      - "${IP}:${UNISON_API_EXPOSE_WS}"
+    depends_on:
+      - postgres
+    <<: *default-healthcheck

@@ -1,0 +1,29 @@
+{
+  "development": {
+    "driver": "pg",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "database": "unison-api",
+    "schema": "unison-api",
+    "user": "unison-api-user-1",
+    "password": "unison-api-password-1"
+  },
+  "docker": {
+    "driver": "pg",
+    "user": "unison-api",
+    "password": "jsdkhfg23879170calhf4823",
+    "database": "unison-api",
+    "schema": "unison-api",
+    "host": "postgres",
+    "port": 5432
+  },
+  "production": {
+    "driver": "pg",
+    "user": "unison-api",
+    "password": "jsdkhfg23879170calhf4823",
+    "database": "unison-api",
+    "schema": "unison-api",
+    "host": "212.193.61.201",
+    "port": 5432
+  }
+}
