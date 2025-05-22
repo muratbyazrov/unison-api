@@ -10,33 +10,23 @@ VALUES
          'What do we do if someone doesn’t complete a household task — like not cooking or cleaning?');
 
 INSERT INTO quiz_answers (quiz_question_id, ru, en)
--- Вопрос 17
 VALUES
-(18, 'Я вегетарианец / веган и это важно соблюдать', 'I’m vegetarian/vegan and it’s important for me to stick to it'),
-(18, 'Я соблюдаю диету или режим (по медицинским или личным причинам)', 'I follow a diet or schedule (medical or personal reasons)'),
-(18, 'Люблю сладкое, жареное, не думаю о здоровом питании', 'I love sweets, fried food, and don’t worry much about healthy eating'),
-(18, 'Питаюсь разнообразно, без жёстких ограничений', 'I eat a variety of foods, no strict rules'),
-(18, 'Готов(а) подстраиваться под партнёра, если нужно', 'I’m flexible and can adapt to my partner’s preferences'),
+(18, 'Я строго придерживаюсь вегетарианства / веганства', 'I strictly follow a vegetarian/vegan diet'),
+(18, 'Я соблюдаю диету или режим (по медицинским или личным причинам)', 'I follow a diet or eating schedule (for medical or personal reasons)'),
+(18, 'Я ем всё и не ограничиваю себя', 'I eat everything and don’t limit myself'),
+(18, 'Я гибко подстраиваюсь под общие правила в паре', 'I’m flexible and willing to adapt to shared food preferences in a relationship')
 
 -- Вопрос 18
-(19, 'Молчу, чтобы не обидеть, но стараюсь избегать повторений', 'I stay silent not to hurt feelings, but try to avoid repeats'),
-(19, 'Аккуратно скажу, что хотелось бы что-то другое', 'I’ll gently say I’d like something different'),
-(19, 'Если невкусно — скажу прямо, чтобы было лучше', 'If it’s not tasty, I’ll say it directly so it can improve'),
-(19, 'Готов(а) взять на себя готовку, если недоволен(а)', 'I’ll take over the cooking if I’m not satisfied'),
-(19, 'Не важно, вкусно ли — главное, что с любовью', 'Taste doesn’t matter much — love is more important'),
+(19, 'Я всегда благодарен(на), главное — старание и забота', 'I’m always grateful — effort and care matter most'),
+(19, 'Я честно, но мягко скажу, если что-то не нравится', 'I’ll be honest but gentle if I don’t like something'),
+(19, 'Скажу прямо, чтобы стало лучше в будущем', 'I’ll say it directly to help improve next time'),
+(19, 'Я сам(а) беру готовку в свои руки, если недоволен(на)', 'If I’m not satisfied, I take over the cooking'),
 
 -- Вопрос 19
-(20, 'Готовим и убираем вместе', 'We cook and clean together'),
-(20, 'Делим обязанности по очереди', 'We alternate duties'),
-(20, 'Я готовлю, партнёр убирает и моет посуду', 'I cook, my partner cleans and washes dishes'),
-(20, 'Партнёр готовит, я убираю и мою посуду', 'My partner cooks, I clean and wash dishes'),
-(20, 'Я беру на себя почти всё в кухне', 'I take care of almost everything in the kitchen'),
-(20, 'Партнёр берёт на себя почти всё в кухне', 'My partner takes care of almost everything in the kitchen'),
-(20, 'Гибко договариваемся в зависимости от обстоятельств', 'We agree flexibly depending on the situation'),
+(20, 'Всё делаем вместе: готовка, уборка, посуда', 'We do everything together: cooking, cleaning, dishes'),
+(20, 'Чётко делим обязанности: кто-то готовит, кто-то убирает', 'We split duties clearly: one cooks, one cleans'),
 
 -- Вопрос 20
-(21, 'Обсудим и решим, что делать дальше', 'We’ll talk and decide what to do next'),
-(21, 'Напомню и попрошу исправить', 'I’ll remind and ask to fix it'),
-(21, 'Разозлюсь — договор есть договор', 'I’ll get angry — an agreement is an agreement'),
-(21, 'Сделаю сам(а), но подскажу, что это не ок', 'I’ll do it myself but let them know it’s not okay'),
-(21, 'Если это нечасто — не буду придираться', 'If it’s rare, I won’t make a big deal about it');
+(21, 'Обсуждаем спокойно и ищем решение вместе', 'We talk calmly and find a solution together'),
+(21, 'Напоминаю, что договорённости надо соблюдать', 'I remind them that agreements should be respected'),
+(21, 'Сделаю сам(а), если это редко — не проблема', 'I’ll do it myself — it’s no big deal if it’s rare')
