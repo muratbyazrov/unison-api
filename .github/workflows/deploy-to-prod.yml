@@ -25,6 +25,6 @@ jobs:
         run: |
           sshpass -p "${{ secrets.SERVER_PASSWORD }}" ssh -o StrictHostKeyChecking=no root@194.26.138.219 << 'EOF'
             cd /home/unison
-            docker-compose pull unison-api
+            docker-compose pull
             docker-compose up -d --no-deps unison-api
           EOF
