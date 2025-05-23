@@ -9,7 +9,7 @@ module.exports = {
         runMigrations: true,
     },
     http: {
-        host: '127.0.0.1',
+        host: 'unison-api',
         port: 3000,
         path: '/unison-api/v1',
     },

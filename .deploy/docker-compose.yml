@@ -1,5 +1,3 @@
-version: '3.4'
-
 services:
   unison-api:
     image: muratbiazrov/unison-api:latest
@@ -12,7 +10,7 @@ services:
     environment:
       - NODE_ENV=production
     ports:
-      - "${UNISON_API_EXPOSE}"
+      - "3000:3000"
 
   unison-telegram-bot:
     image: muratbiazrov/unison-telegram-bot:latest
