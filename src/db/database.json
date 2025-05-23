@@ -19,11 +19,11 @@
   },
   "production": {
     "driver": "pg",
-    "user": "unison-api",
-    "password": "jsdkhfg23879170calhf4823",
-    "database": "unison-api",
+    "user": "gen_user",
+    "password": ".exAPTQ/VPcqc6",
+    "database": "default_db",
     "schema": "unison-api",
-    "host": "212.193.61.201",
+    "host": "188.225.75.83",
     "port": 5432
   }
 }

@@ -129,3 +129,14 @@
 - `questionId`- *number* -идентификатор вопроса
 - `answerId`- *number* -идентификатор ответа
 
+
+## Подключение к БД
+
+- Подключение
+```shell
+psql 'postgresql://gen_user:.exAPTQ%2FVPcqc6@188.225.75.83:5432/default_db'
+```
+- Создание базы и пользователя
+```shell
+CREATE SCHEMA "unison-api";
+```

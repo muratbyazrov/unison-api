@@ -1,24 +1,16 @@
 module.exports = {
     db: {
-        host: '192.168.100.148',
-        database: 'unison-api',
+        host: '188.225.75.83',
+        database: 'default_db',
         schema: 'unison-api',
-        user: 'unison-api',
-        password: 'test',
+        user: 'gen_user',
+        password: '.exAPTQ/VPcqc6',
         port: 5432,
         runMigrations: true,
     },
     http: {
-        host: '192.168.100.148',
-        port: 3001,
+        host: '127.0.0.1',
+        port: 3000,
         path: '/unison-api/v1',
-    },
-    token: {
-        enabled: true,
-        key: 'token-key',
-        expiresIn: 60 * 1000,
-        uncheckMethods: {
-            account: ['signIn', 'createAccount'],
-        },
     },
 };
