@@ -22,3 +22,4 @@ jobs:
           docker build -t unison-api:${IMAGE_TAG} .
           docker tag unison-api:${IMAGE_TAG} ${{ secrets.DOCKERHUB_USERNAME }}/unison-api:${IMAGE_TAG}
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/unison-api:${IMAGE_TAG}
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/unison-api:latest
