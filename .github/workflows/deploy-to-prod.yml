@@ -20,7 +20,7 @@ jobs:
       - name: Restart docker-compose with new images
         run: |
           sshpass -p "${{ secrets.SERVER_PASSWORD }}" ssh -o StrictHostKeyChecking=no root@212.193.59.46 << 'EOF'
-            cd /home/story-base-server
+            cd /home/unison-api
             docker-compose pull unison-api
             docker-compose up -d --no-deps unison-api
           EOF

@@ -5,8 +5,8 @@ x-check: &default-healthcheck
     test: [ "CMD", "/data/.prepare" ]
 
 services:
-  postgres:
-    image: "${IMG_POSTGRES_TAG}"
+  unison-api:
+    image: muratbiazrov/unison-api:latest
     logging:
       driver: "json-file"
       options:
@@ -14,29 +14,9 @@ services:
         max-file: "5"
     restart: unless-stopped
     environment:
-      - POSTGRES_USER=unison-api-user-0
-      - POSTGRES_PASSWORD=unison-api-password-0
-    command: [ "postgres", "-c", "shared_buffers=256MB", "-c", "max_connections=200" ]
+      - NODE_ENV=docker
     ports:
-      - "${POSTGRES_EXPOSE}"
+      - "${UNISON_API_EXPOSE}"
     volumes:
-      - ./postgres/data:/data:rw
+      - ./uploads:/app/uploads
     <<: *default-healthcheck
-
-#  unison-api:
-#    image: muratbiazrov/unison-api:latest
-#    logging:
-#      driver: "json-file"
-#      options:
-#        max-size: "10m"
-#        max-file: "5"
-#    restart: unless-stopped
-#    environment:
-#      - NODE_ENV=docker
-#    ports:
-#      - "${UNISON_API_EXPOSE}"
-#    depends_on:
-#      - postgres
-#    volumes:
-#      - ./uploads:/app/uploads
-#    <<: *default-healthcheck
