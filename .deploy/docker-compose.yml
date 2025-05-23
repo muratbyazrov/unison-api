@@ -1,9 +1,5 @@
 version: '3.4'
 
-x-check: &default-healthcheck
-  healthcheck:
-    test: [ "CMD", "/data/.prepare" ]
-
 services:
   unison-api:
     image: muratbiazrov/unison-api:latest
@@ -14,9 +10,17 @@ services:
         max-file: "5"
     restart: unless-stopped
     environment:
-      - NODE_ENV=docker
+      - NODE_ENV=production
     ports:
       - "${UNISON_API_EXPOSE}"
-    volumes:
-      - ./uploads:/app/uploads
-    <<: *default-healthcheck
+
+  unison-telegram-bot:
+    image: muratbiazrov/unison-telegram-bot:latest
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
