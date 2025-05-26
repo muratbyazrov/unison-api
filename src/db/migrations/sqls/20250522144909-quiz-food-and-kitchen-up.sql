@@ -1,32 +1,33 @@
 INSERT INTO quiz_questions (quiz_category_id, quiz_question_id, ru, en)
 VALUES
-    (3, 18, 'Какие у тебя предпочтения или ограничения в еде? Вегетарианство? Диеты? Режим? Сладкое?',
-             'What are your dietary preferences or restrictions? Vegetarianism? Diets? Sweets?'),
-    (3, 19, 'Как ты реагируешь, если еда невкусная или однообразная? Даже если партнёр старался?',
-             'How do you react if the food is bland or repetitive — even if your partner made an effort?'),
-    (3, 20, 'Как делим обязанности на кухне? Кто готовит, убирает, моет посуду?',
-             'How do we divide kitchen duties? Who cooks, cleans, washes dishes?'),
-    (3, 21, 'Что делаем, если кто-то не выполнил бытовую задачу — не приготовил, не помыл и т.п.?',
-             'What do we do if someone doesn’t complete a household task — like not cooking or cleaning?');
+    (3, 16, 'Какие у тебя настоящие пищевые предпочтения или ограничения? Вегетарианство? Особые диеты? Любишь ли сладкое или избегаете?',
+             'What are your real dietary preferences or restrictions? Vegetarianism? Special diets? Do you love sweets or avoid them?'),
+    (3, 17, 'Как ты реагируешь, если еда получилась невкусной или однообразной, даже если партнёр старался?',
+             'How do you react if the food is bland or repetitive, even when your partner put effort into it?'),
+    (3, 18, 'Как у нас с разделением дел на кухне? Кто обычно готовит, кто убирает, кто моет посуду?',
+             'How do we divide kitchen duties? Who usually cooks, cleans, and washes dishes?'),
+    (3, 19, 'Что делаем, если кто-то забыл или не сделал свою часть домашних дел — не приготовил, не убрал, не помыл посуду?',
+             'What do we do if someone forgot or didn’t do their share of chores — didn’t cook, clean, or wash dishes?');
 
 INSERT INTO quiz_answers (quiz_question_id, ru, en)
 VALUES
-    (18, 'Я строго придерживаюсь вегетарианства / веганства', 'I strictly follow a vegetarian/vegan diet'),
-    (18, 'Я соблюдаю диету или режим (по медицинским или личным причинам)', 'I follow a diet or eating schedule (for medical or personal reasons)'),
-    (18, 'Я ем всё и не ограничиваю себя', 'I eat everything and don’t limit myself'),
-    (18, 'Я гибко подстраиваюсь под общие правила в паре', 'I’m flexible and willing to adapt to shared food preferences in a relationship'),
+    (16, 'Я твёрдо придерживаюсь вегетарианства или веганства, это важно для меня', 'I firmly follow vegetarianism or veganism; it’s important to me'),
+    (16, 'У меня есть свои диеты или режимы по здоровью или убеждениям', 'I have diets or schedules due to health or beliefs'),
+    (16, 'Ем всё подряд и не заморачиваюсь', 'I eat pretty much everything and don’t fuss'),
+    (16, 'Готов(а) подстраиваться и искать компромиссы вместе', 'I’m willing to adapt and find compromises together'),
 
-    -- Вопрос 18
-    (19, 'Я всегда благодарен(на), главное — старание и забота', 'I’m always grateful — effort and care matter most'),
-    (19, 'Я честно, но мягко скажу, если что-то не нравится', 'I’ll be honest but gentle if I don’t like something'),
-    (19, 'Скажу прямо, чтобы стало лучше в будущем', 'I’ll say it directly to help improve next time'),
-    (19, 'Я сам(а) беру готовку в свои руки, если недоволен(на)', 'If I’m not satisfied, I take over the cooking'),
+    (17, 'Всегда ценю старания, даже если результат не идеален', 'I always appreciate the effort, even if the result isn’t perfect'),
+    (17, 'Скажу деликатно, если что-то не понравилось, чтобы не обидеть', 'I’ll say gently if I don’t like something, so as not to hurt feelings'),
+    (17, 'Предпочитаю честно сказать, чтобы в следующий раз было лучше', 'I prefer to be honest so next time can be better'),
+    (17, 'Если не нравится, обычно беру готовку на себя', 'If I’m unhappy, I usually take over cooking'),
 
-    -- Вопрос 19
-    (20, 'Всё делаем вместе: готовка, уборка, посуда', 'We do everything together: cooking, cleaning, dishes'),
-    (20, 'Чётко делим обязанности: кто-то готовит, кто-то убирает', 'We split duties clearly: one cooks, one cleans'),
+    (18, 'Готовим и убираем вместе', 'We cook and clean together'),
+    (18, 'Делаем по очереди', 'We take turns'),
+    (18, 'Муж готовит, жена моет посуду', 'Husband cooks, wife washes dishes'),
+    (18, 'Жена готовит, муж моет посуду', 'Wife cooks, husband washes dishes'),
+    (18, 'Вся кухня на женских плечах', 'The kitchen is all on the wife’s shoulders'),
+    (18, 'Муж полностью отвечает за кухню', 'Husband takes full responsibility for the kitchen'),
 
-    -- Вопрос 20
-    (21, 'Обсуждаем спокойно и ищем решение вместе', 'We talk calmly and find a solution together'),
-    (21, 'Напоминаю, что договорённости надо соблюдать', 'I remind them that agreements should be respected'),
-    (21, 'Сделаю сам(а), если это редко — не проблема', 'I’ll do it myself — it’s no big deal if it’s rare');
+    (19, 'Обсуждаем спокойно, без упрёков, ищем компромиссы', 'We discuss calmly, without blaming, and find compromises'),
+    (19, 'Напоминаю о договорённостях, чтобы не забывали', 'I remind about agreements so they don’t forget'),
+    (19, 'Если редко — делаю сам(а), не проблема', 'If it happens rarely, I do it myself — no problem');

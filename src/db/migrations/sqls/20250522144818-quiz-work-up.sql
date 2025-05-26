@@ -1,29 +1,29 @@
 INSERT INTO quiz_questions (quiz_category_id, quiz_question_id, ru, en)
 VALUES
-(2, 15, 'Если у нас возникнет конфликт между работой и семьей — что важнее?',
-         'If we face a conflict between work and family — what’s more important?'),
-(2, 16, 'Есть ли у тебя требования или ограничения к работе партнёра?',
-         'Do you have any expectations or limits regarding your partner’s job?'),
-(2, 17, 'Готов(а) ли ты поменять или оставить свою работу ради семьи? В каких случаях?',
-         'Would you be willing to change or leave your job for the family? Under what conditions?');
+(2, 13, 'Если у нас возникнет серьёзный конфликт между работой и семьёй — что для тебя важнее?',
+     'If we face a serious conflict between work and family — what matters more to you?'),
+(2, 14, 'Есть ли у тебя чёткие ожидания или запреты по поводу работы партнёра?',
+     'Do you have clear expectations or deal-breakers regarding your partner’s job?'),
+(2, 15, 'Готов(а) ли ты ради семьи сменить или даже уйти с работы? В каких ситуациях?',
+     'Would you be willing to change or quit your job for the family? In what situations?');
 
 
 INSERT INTO quiz_answers (quiz_question_id, ru, en)
 VALUES
+-- Вопрос 13
+(13, 'Семья — это главное, даже если придётся пожертвовать карьерой', 'Family is the top priority, even if it means sacrificing career'),
+(13, 'Работа — это фундамент нашего благополучия', 'Work is the foundation of our wellbeing'),
+(13, 'Постараемся найти золотую середину и компромиссы', 'We will try to find a middle ground and compromises'),
+(13, 'Зависит от обстоятельств, нельзя заранее решить', 'It depends on the circumstances, can’t decide upfront'),
+
 -- Вопрос 14
-(15, 'Семья всегда на первом месте', 'Family always comes first'),
-(15, 'Работа — это основа стабильности', 'Work is the foundation of stability'),
-(15, 'Будем искать компромиссы', 'We will seek compromises'),
-(15, 'Зависит от ситуации', 'It depends on the situation'),
+(14, 'Работа партнёра не должна отнимать слишком много времени от семьи', 'Partner’s work shouldn’t take too much time away from family'),
+(14, 'Для меня важно, чтобы работа была стабильной и приносила достойный доход', 'It’s important that the job is stable and provides a decent income'),
+(14, 'Не люблю, когда работа связана с частыми командировками и ночными сменами', 'I dislike frequent business trips and night shifts'),
+(14, 'Уважение к выбору друг друга важнее любых ограничений', 'Respecting each other’s choices matters more than any limits'),
 
 -- Вопрос 15
-(16, 'Работа не должна мешать личной жизни', 'Work should not interfere with personal life'),
-(16, 'Важно, чтобы была стабильность и достойный доход', 'Stability and decent income are important'),
-(16, 'Нежелательны командировки, ночные смены, переработки', 'No frequent business trips, night shifts or overwork'),
-(16, 'Уважение к выбору партнёра важнее ограничений', 'Respect for partner’s choice matters more than limitations'),
-
--- Вопрос 16
-(17, 'Да, при необходимости я сменю или оставлю работу', 'Yes, I would change or leave my job if needed'),
-(17, 'Только если найдётся лучший вариант', 'Only if a better opportunity comes up'),
-(17, 'Обсудим это вместе, если будет повод', 'We’ll discuss it together if there’s a reason'),
-(17, 'Нет, моя работа — часть моей личности', 'No, my job is part of who I am');
+(15, 'Да, если это поможет сохранить нашу семью и сделать её счастливее', 'Yes, if it helps to keep our family and make it happier'),
+(15, 'Только если появится действительно лучшее предложение или вариант', 'Only if a truly better opportunity arises'),
+(15, 'Обсудим вместе, когда появится такая ситуация', 'We’ll discuss it together if that situation comes up'),
+(15, 'Нет, работа — важная часть моей жизни и самовыражения', 'No, work is an important part of my life and self-expression');

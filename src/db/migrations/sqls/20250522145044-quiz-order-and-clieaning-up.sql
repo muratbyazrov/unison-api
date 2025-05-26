@@ -1,32 +1,38 @@
--- Вопросы
 INSERT INTO quiz_questions (quiz_category_id, quiz_question_id, ru, en)
 VALUES
-    (4, 22, 'Порядок и чистота в доме. Важно ли это для вас?', 'Order and cleanliness at home. Is it important to you?'),
-    (4, 23, 'Кто подметает и моет полы, пылесосит, стирает пыль?', 'Who sweeps and mops the floors, vacuums, dusts?'),
-    (4, 24, 'Убираем ли за собой постель сразу? Кто? Вешаем ли за собой платье, костюм, кладем ли вещи обязательно на место?', 'Do we make the bed right away? Who does it? Do we hang up our clothes and put things back in place?'),
-    (4, 25, 'Как реагируем, когда кто-то НЕ: не моет, не вытирает, не убирает, не кладет и пр. ? А в ответ?', 'How do we react when someone DOESN’T: clean, wipe, tidy, put things away, etc.? And how do they respond?'),
-    (4, 26, 'Можно ли делать замечания вам? В какой форме нельзя? Можете ли делать замечания вы?', 'Can someone make remarks to you? In what form is it unacceptable? Can you make remarks yourself?');
+    (4, 20, 'Насколько для вас важен порядок и чистота в доме?', 'How important is order and cleanliness at home to you?'),
+    (4, 21, 'Кто у вас обычно подметает, моет полы, пылесосит и стирает пыль?', 'Who usually sweeps, mops, vacuums, and dusts at home?'),
+    (4, 22, 'Убираете ли вы постель сразу после сна?', 'Do you make the bed right after waking up?'),
+    (4, 23, 'Всегда ли вы кладёте вещи на место и вешаете одежду?', 'Do you always put things away and hang up your clothes?'),
+    (4, 24, 'Как вы реагируете, если кто-то не моет, не вытирает пыль, не убирает или не кладет вещи на место?', 'How do you react if someone doesn’t clean, dust, tidy up, or put things away?'),
+    (4, 25, 'Можно ли делать вам замечания? В каком тоне или форме это неприемлемо?', 'Is it okay to make remarks to you? In what tone or form is it not acceptable?');
 
--- Ответы
+
 INSERT INTO quiz_answers (quiz_question_id, ru, en)
 VALUES
-    (22, 'Очень важно', 'Very important'),
-    (22, 'Предпочитаю чистоту, но один день беспорядка ничего не поменяет', 'I prefer cleanliness, but one messy day won’t change much'),
-    (22, 'Спокойно отношусь к беспорядку', 'I don’t mind mess'),
+    (20, 'Очень важно — люблю, когда всё чисто и аккуратно', 'Very important — I love when everything is clean and tidy'),
+    (20, 'Предпочитаю порядок, но один день бардака не страшен', 'I prefer order, but one messy day won’t hurt anyone'),
+    (20, 'Не парюсь, если вокруг немного беспорядка', 'I don’t stress over a bit of mess'),
 
-    (23, 'Все делает жена', 'My wife does everything'),
-    (23, 'Все делает муж', 'My husband does everything'),
-    (23, 'Делаем все вместе и поровну', 'We share the chores equally'),
-    (23, 'Расписываем обязанности по дням', 'We schedule tasks by days'),
+    (21, 'Вся уборка — на жене', 'My wife takes care of all cleaning'),
+    (21, 'Уборка — это дело мужа', 'My husband takes care of cleaning'),
+    (21, 'Делим домашние дела поровну и делаем вместе', 'We share household chores equally and do them together'),
+    (21, 'Каждый отвечает за свои задачи', 'Each person is responsible for their own tasks'),
+    (21, 'Расписали обязанности по дням недели', 'We scheduled chores by days of the week'),
 
-    (24, 'Убираем постель сразу', 'We make the bed right away'),
-    (24, 'Убираем постель в течение дня', 'We make the bed during the day'),
-    (24, 'Не придаем значения этому', 'We don’t pay much attention to that'),
+    (22, 'Всегда убираю постель сразу', 'I always make the bed right away'),
+    (22, 'В основном убираю сразу, но иногда могу забыть — не считаю это большой проблемой', 'I usually make it right away, but sometimes I forget — it’s not a big deal'),
+    (22, 'Не считаю это важным и редко убираю', 'I don’t consider it important and rarely make the bed'),
 
-    (25, 'Высказываем замечания тактично', 'We make remarks tactfully'),
-    (25, 'Обсуждаем и находим решение', 'We discuss and find a solution'),
-    (25, 'Напоминаем о договоренности', 'We remind each other of the agreement'),
+    (23, 'Да, всегда стараюсь всё аккуратно убирать', 'Yes, I always try to keep things tidy'),
+    (23, 'Чаще всего, но иногда бывает лень', 'Most of the time, but sometimes I’m too lazy'),
+    (23, 'Часто оставляю вещи где попало', 'I often leave things lying around'),
+    (23, 'Не обращаю на это внимания', 'I don’t pay attention to that'),
 
-    (26, 'Можно делать замечания в любой форме', 'Remarks can be made in any form'),
-    (26, 'Можно делать замечания, но тактично', 'Remarks can be made, but tactfully'),
-    (26, 'Замечания не делаем, решаем спокойно', 'We don’t make remarks, we resolve things calmly');
+    (24, 'Не обращаем внимания и делаем сами — для меня это не проблема', 'We ignore it and do it ourselves — it’s not a problem for me'),
+    (24, 'Обсуждаем ситуацию и вежливо напоминаем ещё раз', 'We discuss the situation and politely remind again'),
+    (24, 'Злюсь, потому что боюсь, что так будет только хуже', 'I get upset because I fear it will only get worse'),
+
+    (25, 'Открыт(а) к любым замечаниям, если они помогают стать лучше', 'I’m open to any remarks if they help me improve'),
+    (25, 'Предпочитаю, чтобы замечания были деликатными и без обвинений', 'I prefer remarks to be delicate and without accusations'),
+    (25, 'Вообще не люблю замечания и не делаю их сам(а)', 'I don’t like remarks at all and don’t make them myself');

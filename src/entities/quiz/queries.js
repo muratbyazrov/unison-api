@@ -35,7 +35,12 @@ module.exports = {
             INNER JOIN quiz_answers AS qa ON qq.quiz_question_id = qa.quiz_question_id
         WHERE
             qq.quiz_category_id = :quizCategoryId
-        GROUP BY qq.quiz_question_id, qq.quiz_category_id, qq.ru, qq.en;`,
+        GROUP BY 
+             qq.quiz_question_id
+            ,qq.quiz_category_id
+            ,qq.ru
+            ,qq.en
+        ORDER BY qq.quiz_question_id;`,
 
     getQuizAnswers: `
         SELECT
