@@ -1,30 +1,30 @@
--- Вставка вопросов с английским переводом
 INSERT INTO quiz_questions (quiz_category_id, quiz_question_id, ru, en)
 VALUES
-     (5, 27, 'Во сколько кто встает и ложится спать? Кому когда будильник ставить? Кто кого может разбудить?',
-          'What time does each of us get up and go to bed? Who sets the alarm and when? Who can wake whom?'),
-     (5, 28, 'Кто и как следит за физическим здоровьем, зарядка, спорт? Делаем ли вместе?',
-          'Who and how takes care of physical health, exercise, sports? Do we do it together?'),
-     (5, 29, 'Насколько важно для вас время вместе? Вечером? Утром?',
-          'How important is time together for you? In the evening? In the morning?'),
-     (5, 30, 'Как реагируем, если кто-то из нас не придерживается установленного режима дня?',
-          'How do we react if someone doesn’t stick to the established daily routine?');
+     (5, 26, 'Во сколько обычно каждый из нас просыпается и ложится спать? Кто ставит будильник и кого можно разбудить?',
+          'What time does each of us usually wake up and go to bed? Who sets the alarm and who can wake whom up?'),
+     (5, 27, 'Кто и как заботится о своём здоровье: зарядка, спорт? Занимаемся вместе или по отдельности?',
+          'Who takes care of their health—morning workouts, sports? Do we do it together or separately?'),
+     (5, 28, 'Насколько для нас важно проводить время вместе — утром или вечером?',
+          'How important is it for us to spend time together—morning or evening?'),
+     (5, 29, 'Что мы делаем, если кто-то из нас сбивается с привычного режима дня?',
+          'What do we do if one of us falls out of the usual daily routine?');
 
--- Вставка ответов с английским переводом
+
 INSERT INTO quiz_answers (quiz_question_id, ru, en)
 VALUES
-     (27, 'Встаем и ложимся вместе', 'We get up and go to bed together'),
-     (27, 'Каждый по своему графику', 'Each follows their own schedule'),
-     (27, 'Будим друг друга по необходимости', 'We wake each other up as needed'),
+     (26, 'Просыпаемся и ложимся спать вместе — так приятнее', 'We wake up and go to bed together—it feels nicer that way'),
+     (26, 'У каждого свой ритм — и это нормально', 'Each of us has our own rhythm—and that’s totally fine'),
+     (26, 'Будим друг друга, если нужно — без обид', 'We wake each other up when needed—no hard feelings'),
 
-     (28, 'Следим за здоровьем и занимаемся спортом вместе', 'We take care of health and exercise together'),
-     (28, 'Каждый следит за своим здоровьем индивидуально', 'Each takes care of their own health individually'),
-     (28, 'Зарядка утром вместе, спорт по возможности', 'Morning exercises together, sports when possible'),
+     (27, 'Любим заниматься спортом вместе — мотивируем друг друга', 'We enjoy working out together—it keeps us motivated'),
+     (27, 'Каждый сам по себе — у нас разные подходы к здоровью', 'Each of us handles health in our own way'),
+     (27, 'Зарядка вместе, спорт — когда как получится', 'Morning stretches together, sports—whenever it works out'),
 
-     (29, 'Очень важно проводить время вместе утром и вечером', 'It is very important to spend time together morning and evening'),
-     (29, 'Предпочитаем проводить время вместе вечером', 'We prefer to spend time together in the evening'),
-     (29, 'Не важно, главное — быть рядом', 'It doesn’t matter, the main thing is to be close'),
+     (28, 'Очень ценим время вместе — и утром, и вечером', 'We really value our time together—both in the morning and evening'),
+     (28, 'Вечера — наше время, когда можно пообщаться и расслабиться', 'Evenings are our time to talk and relax'),
+     (28, 'Главное — быть рядом, а не часы на часах', 'The most important thing is being together, not the time on the clock'),
 
-     (30, 'Напоминаем друг другу о режиме', 'We remind each other about the routine'),
-     (30, 'Обсуждаем и находим компромисс', 'We discuss and find a compromise'),
-     (30, 'Не придаем значения отклонениям от режима', 'We don’t pay attention to deviations from the routine');
+     (29, 'Напоминаем друг другу с заботой и любовью', 'We gently remind each other with care and love'),
+     (29, 'Садимся, обсуждаем и находим решение', 'We sit down, talk it through, and find a solution'),
+     (29, 'Не заморачиваемся — гибкость тоже важна', 'We don’t stress about it—flexibility matters too');
+

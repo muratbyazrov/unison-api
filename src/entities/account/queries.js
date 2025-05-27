@@ -54,6 +54,10 @@ module.exports = {
             FROM accounts_answers
             WHERE telegram_id = :telegramId
         ),
+        all_questions AS (
+            SELECT DISTINCT quiz_category_id, quiz_question_id
+            FROM quiz_questions
+        ),
         match_counts AS (
             SELECT
                 aa.telegram_id,
@@ -74,8 +78,7 @@ module.exports = {
                 aa.telegram_id
         ),
         total_questions AS (
-            SELECT COUNT(*) AS total
-            FROM user_answers
+            SELECT COUNT(*) AS total FROM all_questions
         )
         SELECT
             mc.telegram_id,
@@ -111,23 +114,24 @@ module.exports = {
                 AND u1.quiz_answer_id = u2.quiz_answer_id
             GROUP BY u1.quiz_category_id
         ),
-        total_user1_answers AS (
+        total_questions_per_category AS (
             SELECT
                 quiz_category_id,
-                COUNT(*) AS total
-            FROM user1_answers
+                COUNT(DISTINCT quiz_question_id) AS total
+            FROM quiz_questions
             GROUP BY quiz_category_id
         )
         SELECT
             :telegramId1 AS telegram_id_1,
             :telegramId2 AS telegram_id_2,
-            t.quiz_category_id,
+            tq.quiz_category_id,
             qc.ru,
             qc.en,
-            ROUND(100.0 * COALESCE(m.same_answers_count, 0) / t.total, 2) AS match_percentage
-        FROM total_user1_answers t
-        LEFT JOIN matching_answers m ON t.quiz_category_id = m.quiz_category_id
-        JOIN quiz_categories qc ON qc.quiz_category_id = t.quiz_category_id
+            ROUND(100.0 * m.same_answers_count / tq.total, 2) AS match_percentage
+        FROM total_questions_per_category tq
+        JOIN matching_answers m ON tq.quiz_category_id = m.quiz_category_id
+        JOIN quiz_categories qc ON qc.quiz_category_id = tq.quiz_category_id
+        WHERE m.same_answers_count > 0
         ORDER BY match_percentage DESC;`,
 
     checkIfGreetingSent: `
