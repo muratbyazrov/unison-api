@@ -1,4 +1,4 @@
-const {Story: {validator: {schemaItems: {string1, number1, limit}}}} = require('story-system');
+const {Story: {validator: {schemaItems: {string1, number1, limit, nullOrString}}}} = require('story-system');
 
 const getAccountsSchema = {
     id: 'getAccountsSchema',
@@ -30,7 +30,7 @@ const createAccountSchema = {
         gender: {enum: [1, 2]},
         languageCode: string1,
         firstName: string1,
-        username: string1,
+        username: nullOrString,
     },
 };
 
