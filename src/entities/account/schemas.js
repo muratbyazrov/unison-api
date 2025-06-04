@@ -23,7 +23,7 @@ const getAccountMatchesSchema = {
 const createAccountSchema = {
     id: 'createAccountSchema',
     additionalItems: false,
-    required: ['telegramId'],
+    required: ['telegramId', 'firstName'],
     properties: {
         telegramId: number1,
         age: number1,
